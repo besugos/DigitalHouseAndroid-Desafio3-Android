@@ -14,4 +14,10 @@
     <dimen name="dim_10_dp">10dp</dimen>
     <dimen name="dim_20_sp">20sp</dimen>
     <dimen name="dim_4_dp">4dp</dimen>
+    <dimen name="dim_370_dp">370dp</dimen>
+    <dimen name="dim_350_dp">350dp</dimen>
+    <dimen name="dim_20_dp">20dp</dimen>
+    <dimen name="dim_75_dp">75dp</dimen>
+    <dimen name="dim_130_dp">130dp</dimen>
+    <dimen name="dim_70_dp">70dp</dimen>
 </resources>

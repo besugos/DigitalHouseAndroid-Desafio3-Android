@@ -9,6 +9,7 @@
     tools:context=".LoginActivity">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView2"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dim_380_dp"
         android:backgroundTint="@color/colorAccent"
@@ -17,22 +18,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4">
+        app:layout_constraintVertical_bias="0.44">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dim_16_dp"
-            android:text="@string/welcome"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="@dimen/dim_24_sp" />
 
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dim_380_dp"
+        android:layout_height="@dimen/dim_350_dp"
         android:backgroundTint="@color/white"
         app:cardCornerRadius="@dimen/dim_16_dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,7 +45,7 @@
                 android:id="@+id/tfEmailLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dim_24_dp"
+                android:layout_marginTop="@dimen/dim_16_dp"
                 android:hint="@string/e_mail">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -82,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dim_minus8_dp"
                 android:text="@string/remember"
-                android:textColor="@color/checkboxTextColor" />
+                android:textColor="@color/checkboxText" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLoginLogin"
@@ -98,15 +92,29 @@
                 android:id="@+id/txtCreateAccount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dim_12_dp"
+                android:layout_marginTop="@dimen/dim_10_dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:text="@string/create_account"
                 android:textAlignment="center"
+                android:textColor="@color/textCreateAccount"
                 android:textSize="@dimen/dim_20_sp" />
 
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
-    
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dim_24_sp"
+        app:layout_constraintBottom_toTopOf="@+id/materialCardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/materialCardView2"
+        android:elevation="@dimen/dim_4_dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
