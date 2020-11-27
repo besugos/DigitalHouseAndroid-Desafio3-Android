@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Login">
-        <activity android:name=".login.view.RegisterActivity"
-            android:parentActivityName=".login.view.LoginActivity"/>
-
+        <activity android:name=".BigCoverActivity"></activity>
+        <activity android:name=".DetailActivity" />
         <activity
-            android:name=".login.view.LoginActivity" />
+            android:name=".login.view.RegisterActivity"
+            android:parentActivityName=".login.view.LoginActivity" />
+        <activity android:name=".login.view.LoginActivity" />
         <activity
             android:name=".splash.view.SplashActivity"
             android:theme="@style/Splash">
@@ -23,7 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home.view.HomeActivity"></activity>
+        <activity android:name=".home.view.HomeActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

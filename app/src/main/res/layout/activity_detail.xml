@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:background="@color/colorLoginBackground">
+
+    <ImageView
+        android:id="@+id/imgTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/spidey_mod_redim"
+        />
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgTop"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dim_16_dp"
+        android:layout_marginTop="@dimen/dim_24_dp"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCover"
+        tools:text="AMAZING SPIDER-MAN (2014) #1 (MHAN VARIANT)" />
+
+    <TextView
+        android:id="@+id/txtBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dim_16_dp"
+        android:layout_marginTop="@dimen/dim_24_dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dim_16_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+        tools:text="@string/sinopse"/>
+
+    <TextView
+        android:id="@+id/txtPublishedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dim_4_dp"
+        android:layout_marginStart="@dimen/dim_16_dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dim_16_sp"
+        android:fontFamily="@font/roboto_condensed_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/txtPriceLabel"
+        android:text="@string/published"/>
+
+    <TextView
+        android:id="@+id/txtPublished"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dim_4_dp"
+        android:layout_marginStart="@dimen/dim_8_dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dim_16_sp"
+        app:layout_constraintStart_toEndOf="@id/txtPublishedLabel"
+        app:layout_constraintBottom_toTopOf="@id/txtPriceLabel"
+        tools:text="April 30, 2014"/>
+
+    <TextView
+        android:id="@+id/txtPriceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dim_4_dp"
+        android:layout_marginStart="@dimen/dim_16_dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dim_16_sp"
+        android:fontFamily="@font/roboto_condensed_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/txtPagesLabel"
+        android:text="@string/price"/>
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dim_4_dp"
+        android:layout_marginStart="@dimen/dim_8_dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dim_16_sp"
+        app:layout_constraintStart_toEndOf="@id/txtPriceLabel"
+        app:layout_constraintBottom_toTopOf="@id/txtPagesLabel"
+        tools:text="$ 5,99"/>
+
+
+    <TextView
+        android:id="@+id/txtPagesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dim_16_dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dim_16_sp"
+        android:fontFamily="@font/roboto_condensed_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/pages"/>
+
+    <TextView
+        android:id="@+id/txtPages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dim_16_dp"
+        android:layout_marginStart="@dimen/dim_8_dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dim_16_sp"
+        app:layout_constraintStart_toEndOf="@id/txtPagesLabel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="38"/>
+
+
+    <ImageView
+        android:id="@+id/imgCover"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:adjustViewBounds="true"
+        android:background="@color/white"
+        android:padding="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgTop"
+        app:layout_constraintStart_toStartOf="@+id/imgTop"
+        app:layout_constraintTop_toTopOf="@+id/imgTop"
+        app:layout_constraintVertical_bias="1.4"
+        tools:srcCompat="@drawable/cover" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
