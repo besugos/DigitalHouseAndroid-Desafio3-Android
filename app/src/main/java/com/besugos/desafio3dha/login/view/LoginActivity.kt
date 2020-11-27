@@ -1,10 +1,12 @@
-package com.besugos.desafio3dha
+package com.besugos.desafio3dha.login.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.besugos.desafio3dha.home.view.HomeActivity
+import com.besugos.desafio3dha.R
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +17,7 @@ class LoginActivity : AppCompatActivity() {
         val btnRegister = this.findViewById<TextView>(R.id.txtCreateAccount)
 
         btnLogin.setOnClickListener() {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
 

@@ -1,10 +1,10 @@
-package com.besugos.desafio3dha
+package com.besugos.desafio3dha.login.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
+import com.besugos.desafio3dha.R
 
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
