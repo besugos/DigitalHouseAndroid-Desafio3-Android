@@ -11,7 +11,7 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        val toolbar = this.findViewById<Toolbar>(R.id.toolbar)
+        val toolbar = this.findViewById<Toolbar>(R.id.tbRegister)
         setSupportActionBar(toolbar)
 
         val btnSignUp = this.findViewById<Button>(R.id.btnRegister)

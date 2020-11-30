@@ -15,7 +15,8 @@
         Putting the \"friendly\" back in the neighborhood, the \"hero\" back into \"super hero,\" and
         the \"amazing\" back into "Spider-Man! Also returning The recharged and reenergized ELECTRO!</string>
     <string name="pages">Pages:</string>
-    <string name="pages">Pages:</string>
     <string name="price">Price:</string>
     <string name="published">Published:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
