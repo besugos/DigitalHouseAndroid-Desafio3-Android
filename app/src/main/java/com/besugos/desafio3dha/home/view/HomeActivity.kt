@@ -91,7 +91,6 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-
     private fun setScrollView() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {

@@ -9,8 +9,7 @@ import retrofit2.http.Query
 interface IMarvelEndpoint {
     @GET("/v1/public/comics")
     suspend fun getComics(
-        @Query("offset") offset: Int? = 0,
-        @Query("series") series: Int? = 17285
+        @Query("offset") offset: Int? = 0
     ): ComicDataWrapperModel<ComicModel>
 
     companion object {
