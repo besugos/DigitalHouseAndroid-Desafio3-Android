@@ -4,11 +4,11 @@ import com.google.gson.annotations.SerializedName
 
 data class ThumbnailModel (
     @SerializedName("path")
-    val pathMini: String,
+    val pathThumb: String,
     @SerializedName("extension")
-    val extensaoMini: String
+    val extensaoThumb: String
 ) {
     fun getImagePath(imageResolution: String? = "detail"): String {
-        return "$pathMini/$imageResolution.$extensaoMini".replace("http://", "https://")
+        return "$pathThumb/$imageResolution.$extensaoThumb".replace("http://", "https://")
     }
 }

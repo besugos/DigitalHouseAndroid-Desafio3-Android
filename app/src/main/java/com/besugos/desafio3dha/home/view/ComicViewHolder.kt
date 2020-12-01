@@ -15,9 +15,10 @@ class ComicViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
     private val idPersonagem = view.findViewById<TextView>(R.id.txtIssueNumber)
 
     @SuppressLint("SetTextI18n")
-    fun bind(personagemModel: ComicModel) {
-        idPersonagem.text = " # ${personagemModel.id}"
-        val imagePath = personagemModel.thumbnail?.getImagePath()
+    fun bind(comicModel: ComicModel) {
+        val issueString = comicModel.issueNumber.toInt().toString()
+        idPersonagem.text = " # ${issueString}"
+        val imagePath = comicModel.thumbnail?.getImagePath()
         Picasso.get().load(imagePath).into(imagem)
     }
 }

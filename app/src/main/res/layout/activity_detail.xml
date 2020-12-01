@@ -15,7 +15,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/spidey_mod_redim" />
+        app:srcCompat="@drawable/spidey_mod_redim"
+        android:contentDescription="@string/wallpaper" />
 
     <ImageView
         android:id="@+id/imgBack"
@@ -25,10 +26,13 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imgTop"
-        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="@string/back_button" />
 
     <TextView
-        android:id="@+id/txtTitle"
+        android:id="@+id/txtIssueTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/dim_16_dp"
@@ -41,18 +45,27 @@
         app:layout_constraintTop_toBottomOf="@+id/imgCover"
         tools:text="AMAZING SPIDER-MAN (2014) #1 (MHAN VARIANT)" />
 
-    <TextView
-        android:id="@+id/txtBody"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dim_0_dp"
         android:layout_marginHorizontal="@dimen/dim_16_dp"
         android:layout_marginTop="@dimen/dim_24_dp"
-        android:textColor="@color/white"
-        android:textSize="@dimen/dim_16_sp"
+        android:layout_marginBottom="@dimen/dim_16_dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtPublished"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
-        tools:text="@string/sinopse" />
+        app:layout_constraintTop_toBottomOf="@+id/txtIssueTitle"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/txtBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dim_16_sp"
+            tools:text="@string/sinopse" />
+
+    </ScrollView>
 
     <TextView
         android:id="@+id/txtPublishedLabel"
@@ -142,7 +155,8 @@
         app:layout_constraintStart_toStartOf="@+id/imgTop"
         app:layout_constraintTop_toTopOf="@+id/imgTop"
         app:layout_constraintVertical_bias="1.4"
-        tools:srcCompat="@drawable/cover" />
+        tools:srcCompat="@drawable/cover"
+        android:contentDescription="@string/cover_thumbnail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

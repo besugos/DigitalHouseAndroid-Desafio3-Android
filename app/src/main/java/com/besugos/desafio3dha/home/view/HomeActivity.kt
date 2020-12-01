@@ -1,9 +1,11 @@
 package com.besugos.desafio3dha.home.view
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -11,41 +13,55 @@ import com.besugos.desafio3dha.R
 import com.besugos.desafio3dha.home.model.ComicModel
 import com.besugos.desafio3dha.home.repository.MarvelRepository
 import com.besugos.desafio3dha.home.viewmodel.ComicViewModel
+import java.time.format.DateTimeFormatter
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var _viewModel: ComicViewModel
     private lateinit var _listAdapter: ComicAdapter
-    private lateinit var _recyclerView: RecyclerView
     private var _comics = mutableListOf<ComicModel>()
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        val viewGridManager = GridLayoutManager(this, 3)
+        val manager = GridLayoutManager(this, 3)
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
 
         _comics = mutableListOf<ComicModel>()
         _listAdapter = ComicAdapter(_comics) {
+
             val intent = Intent(this@HomeActivity, DetailActivity::class.java)
-//            intent.putExtra("COMICS_ID", it.id)
-//            intent.putExtra("COMICS_DESCRIPTION", it.descricao)
-            startActivity(intent)
+            with(intent) {
+                putExtra("COMICS_ID", it.id)
+                putExtra("COMICS_TITLE", it.title)
+                putExtra("COMICS_EDITION", it.issueNumber.toString())
+                putExtra("COMICS_DESCRIPTION", it.description)
+                putExtra("COMICS_PAGES", it.pageCount.toString())
+                putExtra("COMICS_DATE", it.dates[1].date)
+                putExtra("COMICS_PRECO", it.prices[0].price.toString())
+                putExtra("COMICS_THUMBNAIL", it.thumbnail?.getImagePath())
+                putExtra("COMICS_IMAGEM", it.images.size)
+
+                startActivity(this)
+            }
         }
 
         recyclerView.apply {
             setHasFixedSize(true)
-            layoutManager = viewGridManager
+            layoutManager = manager
             adapter = _listAdapter
         }
 
         viewModelProvider()
+
         getList()
 
         showLoading(true)
-//        setScrollView()
+
+        setScrollView()
     }
 
     private fun viewModelProvider() {
@@ -73,7 +89,8 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setScrollView() {
-        _recyclerView.run {
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        recyclerView.run {
             addOnScrollListener(object : RecyclerView.OnScrollListener() {
                 override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                     super.onScrolled(recyclerView, dx, dy)

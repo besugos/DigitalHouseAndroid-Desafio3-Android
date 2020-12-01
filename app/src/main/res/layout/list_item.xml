@@ -1,47 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="@dimen/dim_8_dp"
+    android:layout_marginBottom="@dimen/dim_20_dp"
+    android:backgroundTint="@color/fullTrans"
+    app:cardCornerRadius="@dimen/dim_0_dp"
     android:padding="@dimen/dim_8_dp"
-    android:orientation="vertical"
-    android:background="@color/colorLoginBackground">
+    app:cardElevation="@dimen/dim_0_dp"
+    android:clickable="true"
+    android:focusable="true">
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dim_8_dp"
-        app:cardCornerRadius="@dimen/dim_0_dp"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imgCoverRecycler"
-            android:adjustViewBounds="true"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            tools:src="@drawable/cover"
+            android:id="@+id/imgThumbCover"
+            android:layout_width="@dimen/dim_110_dp"
+            android:layout_height="@dimen/dim_170_dp"
+            android:scaleType="fitXY"
             android:background="@color/white"
-            android:layout_margin="@dimen/dim_4_dp"/>
+            android:padding="@dimen/dim_4_dp"
+            android:src="@drawable/cover"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/txtNumberRecycler"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:text="#96"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:background="@color/colorLoginBackground"
-                android:textSize="@dimen/dim_16_sp"/>
+        <TextView
+            android:id="@+id/txtIssueNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8_dp"
+            tools:text="#96"
+            android:textColor="@color/colorIssueNumber"
+            android:textSize="@dimen/dim_16_sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/imgThumbCover"
+            app:layout_constraintTop_toBottomOf="@id/imgThumbCover" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
 
-    </com.google.android.material.card.MaterialCardView>
-    
-    
-</LinearLayout>
+</com.google.android.material.card.MaterialCardView>

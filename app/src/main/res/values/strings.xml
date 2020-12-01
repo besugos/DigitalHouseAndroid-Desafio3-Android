@@ -19,4 +19,10 @@
     <string name="published">Published:</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cover_thumbnail">Cover thumbnail</string>
+    <string name="wallpaper">Wallpaper</string>
+    <string name="back_button">Back button</string>
+    <string name="comic_cover">Comic cover</string>
+    <string name="close">close</string>
+    <string name="marvel_logo">Marvel logo</string>
 </resources>
