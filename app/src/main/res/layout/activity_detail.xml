@@ -142,15 +142,14 @@
         app:layout_constraintStart_toEndOf="@id/txtPagesLabel"
         tools:text="38" />
 
-
     <ImageView
         android:id="@+id/imgCover"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/dim_120_dp"
+        android:layout_height="@dimen/dim_185_dp"
+        android:scaleType="fitXY"
         android:layout_marginStart="16dp"
-        android:adjustViewBounds="true"
         android:background="@color/white"
-        android:padding="2dp"
+        android:padding="4dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgTop"
         app:layout_constraintStart_toStartOf="@+id/imgTop"
         app:layout_constraintTop_toTopOf="@+id/imgTop"

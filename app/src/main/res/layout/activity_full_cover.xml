@@ -8,8 +8,8 @@
     tools:context=".home.view.FullCoverActivity">
 
     <ImageView
-        android:id="@+id/imgCover"
-        android:layout_width="match_parent"
+        android:id="@+id/imgFullCover"
+        android:layout_width="@dimen/dim_0_dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dim_24_dp"
         android:adjustViewBounds="true"

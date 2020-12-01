@@ -2,10 +2,10 @@ package com.besugos.desafio3dha.home.view
 
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -13,7 +13,6 @@ import com.besugos.desafio3dha.R
 import com.besugos.desafio3dha.home.model.ComicModel
 import com.besugos.desafio3dha.home.repository.MarvelRepository
 import com.besugos.desafio3dha.home.viewmodel.ComicViewModel
-import java.time.format.DateTimeFormatter
 
 class HomeActivity : AppCompatActivity() {
 
@@ -35,15 +34,12 @@ class HomeActivity : AppCompatActivity() {
 
             val intent = Intent(this@HomeActivity, DetailActivity::class.java)
             with(intent) {
-                putExtra("COMICS_ID", it.id)
-                putExtra("COMICS_TITLE", it.title)
-                putExtra("COMICS_EDITION", it.issueNumber.toString())
-                putExtra("COMICS_DESCRIPTION", it.description)
-                putExtra("COMICS_PAGES", it.pageCount.toString())
-                putExtra("COMICS_DATE", it.dates[1].date)
-                putExtra("COMICS_PRECO", it.prices[0].price.toString())
-                putExtra("COMICS_THUMBNAIL", it.thumbnail?.getImagePath())
-                putExtra("COMICS_IMAGEM", it.images.size)
+                putExtra("TITLE", it.title)
+                putExtra("DESCRIPTION", it.description)
+                putExtra("PAGE_COUNT", it.pageCount.toString())
+                putExtra("DATE", it.dates[1].date)
+                putExtra("PRICE", it.prices[0].price.toString())
+                putExtra("THUMBNAIL", it.thumbnail?.getThumbPath())
 
                 startActivity(this)
             }

@@ -1,7 +1,5 @@
 package com.besugos.desafio3dha.home.model
 
-import com.google.gson.annotations.SerializedName
-
 data class ComicModel (
 
     val id: Int,
@@ -11,7 +9,5 @@ data class ComicModel (
     val pageCount: Int,
     val dates: List<DatesModel>,
     val prices: List<PricesModel>,
-    val thumbnail: ThumbnailModel?,
-    val images: List<ImageModel>
-
+    val thumbnail: ThumbnailModel?
 )

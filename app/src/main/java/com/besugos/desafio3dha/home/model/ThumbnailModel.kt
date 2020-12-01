@@ -8,7 +8,8 @@ data class ThumbnailModel (
     @SerializedName("extension")
     val extensaoThumb: String
 ) {
-    fun getImagePath(imageResolution: String? = "detail"): String {
+    fun getThumbPath(imageResolution: String? = "detail"): String {
         return "$pathThumb/$imageResolution.$extensaoThumb".replace("http://", "https://")
     }
 }
+

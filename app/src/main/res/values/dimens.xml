@@ -26,4 +26,6 @@
     <dimen name="dim_60_dp">60dp</dimen>
     <dimen name="dim_110_dp">110dp</dimen>
     <dimen name="dim_170_dp">170dp</dimen>
+    <dimen name="dim_120_dp">120dp</dimen>
+    <dimen name="dim_185_dp">185dp</dimen>
 </resources>

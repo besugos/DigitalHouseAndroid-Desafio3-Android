@@ -18,7 +18,7 @@ class ComicViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
     fun bind(comicModel: ComicModel) {
         val issueString = comicModel.issueNumber.toInt().toString()
         idPersonagem.text = " # ${issueString}"
-        val imagePath = comicModel.thumbnail?.getImagePath()
+        val imagePath = comicModel.thumbnail?.getThumbPath()
         Picasso.get().load(imagePath).into(imagem)
     }
 }
