@@ -84,10 +84,17 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    private fun showResults(list: List<ComicModel>?) {
+
+        list?.let { _comics.addAll(it)}
+        _listAdapter.notifyDataSetChanged()
+
+    }
+
+
     private fun setScrollView() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        recyclerView.run {
-            addOnScrollListener(object : RecyclerView.OnScrollListener() {
+        recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
                 override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                     super.onScrolled(recyclerView, dx, dy)
 
@@ -97,15 +104,16 @@ class HomeActivity : AppCompatActivity() {
                     val lastItem = lastVisible + 6 >= totalItemCount
 
                     if (totalItemCount > 0 && lastItem) {
-                        showLoading(true)
+//                        showLoading(true)
                         _viewModel.nextPage().observe({ lifecycle }, {
+//                            showResults(_comics)
                             _comics.addAll(it)
                             _listAdapter.notifyDataSetChanged()
-                            showLoading(false)
+
                         })
                     }
                 }
             })
         }
     }
-}
+

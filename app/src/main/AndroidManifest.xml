@@ -11,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Login">
-        <activity android:name=".home.view.FullCoverActivity"></activity>
+        <activity android:name=".home.view.FullCoverActivity" />
         <activity android:name=".home.view.DetailActivity" />
         <activity android:name=".home.view.HomeActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:noHistory="true" />
         <activity
             android:name=".splash.view.SplashActivity"
             android:theme="@style/Splash">

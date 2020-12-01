@@ -8,12 +8,9 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.besugos.desafio3dha.R
-import com.besugos.desafio3dha.home.viewmodel.ComicViewModel
 import com.squareup.picasso.Picasso
 
 class DetailActivity : AppCompatActivity() {
-
-    //private lateinit var _viewModel: ComicViewModel
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {

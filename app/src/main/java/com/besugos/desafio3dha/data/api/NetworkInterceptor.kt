@@ -2,8 +2,6 @@ package com.besugos.desafio3dha.data.api
 
 import okhttp3.Interceptor
 import okhttp3.Response
-import java.io.IOException
-import java.math.BigInteger
 import java.security.MessageDigest
 
 class NetworkInterceptor : Interceptor {
@@ -43,10 +41,6 @@ class NetworkInterceptor : Interceptor {
         private const val PRIVATE_KEY = "0dd0c16fedb8a02985977eafca66b49f5e6a526f"
         const val PUBLIC_KEY = "6eb7e8896ec5850c52515a8a23ee97f0"
 
-        fun String.md5(): String {
-            val md = MessageDigest.getInstance("MD5")
-            return BigInteger(1, md.digest(toByteArray())).toString(16).padStart(32, '0')
-        }
     }
 }
 

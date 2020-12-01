@@ -31,6 +31,7 @@
                 android:contentDescription="@string/marvel_logo"
                 android:scaleType="fitStart"
                 app:srcCompat="@drawable/marvel_logo" />
+
         </com.google.android.material.appbar.MaterialToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -38,12 +39,17 @@
     <ProgressBar
         android:id="@+id/loading"
         style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="@dimen/dim_4_dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="@dimen/dim_20_dp"
+        android:layout_height="@dimen/dim_20_dp"
+        android:layout_marginTop="@dimen/dim_16_dp"
+        android:layout_marginEnd="@dimen/dim_24_dp"
+        android:backgroundTint="@color/white"
+        android:elevation="@dimen/dim_40_dp"
+        android:foregroundTint="@color/white"
+        android:indeterminateTint="@color/white"
+        android:progressTint="@color/white"
+        android:secondaryProgressTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
