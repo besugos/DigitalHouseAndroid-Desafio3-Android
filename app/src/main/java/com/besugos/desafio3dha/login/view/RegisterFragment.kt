@@ -1,5 +1,6 @@
 package com.besugos.desafio3dha.login.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -10,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.Navigation
+import com.besugos.desafio3dha.home.view.HomeActivity
 import com.besugos.desafio3dha.R
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -38,7 +40,9 @@ class RegisterFragment : Fragment() {
         view.findViewById<Button>(R.id.btnRegister).setOnClickListener {
 
             if (validaCampos(view)) {
-                navController.navigate(R.id.homeFragment)
+                //navController.navigate(R.id.homeFragment)
+                val intent = Intent(context, HomeActivity::class.java)
+                startActivity(intent)
             }
         }
 

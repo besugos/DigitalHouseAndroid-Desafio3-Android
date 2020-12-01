@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivity"
-    android:background="@color/colorLoginBackground">
+    android:background="@color/colorLoginBackground"
+    tools:context=".home.view.DetailActivity">
 
     <ImageView
         android:id="@+id/imgTop"
@@ -15,8 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/spidey_mod_redim"
-        />
+        app:srcCompat="@drawable/spidey_mod_redim" />
 
     <ImageView
         android:id="@+id/imgBack"
@@ -53,57 +52,57 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle"
-        tools:text="@string/sinopse"/>
+        tools:text="@string/sinopse" />
 
     <TextView
         android:id="@+id/txtPublishedLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dim_4_dp"
         android:layout_marginStart="@dimen/dim_16_dp"
+        android:layout_marginBottom="@dimen/dim_4_dp"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:text="@string/published"
         android:textColor="@color/white"
         android:textSize="@dimen/dim_16_sp"
-        android:fontFamily="@font/roboto_condensed_bold"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/txtPriceLabel"
-        android:text="@string/published"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtPublished"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dim_4_dp"
         android:layout_marginStart="@dimen/dim_8_dp"
+        android:layout_marginBottom="@dimen/dim_4_dp"
         android:textColor="@color/white"
         android:textSize="@dimen/dim_16_sp"
-        app:layout_constraintStart_toEndOf="@id/txtPublishedLabel"
         app:layout_constraintBottom_toTopOf="@id/txtPriceLabel"
-        tools:text="April 30, 2014"/>
+        app:layout_constraintStart_toEndOf="@id/txtPublishedLabel"
+        tools:text="April 30, 2014" />
 
     <TextView
         android:id="@+id/txtPriceLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dim_4_dp"
         android:layout_marginStart="@dimen/dim_16_dp"
+        android:layout_marginBottom="@dimen/dim_4_dp"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:text="@string/price"
         android:textColor="@color/white"
         android:textSize="@dimen/dim_16_sp"
-        android:fontFamily="@font/roboto_condensed_bold"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/txtPagesLabel"
-        android:text="@string/price"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dim_4_dp"
         android:layout_marginStart="@dimen/dim_8_dp"
+        android:layout_marginBottom="@dimen/dim_4_dp"
         android:textColor="@color/white"
         android:textSize="@dimen/dim_16_sp"
-        app:layout_constraintStart_toEndOf="@id/txtPriceLabel"
         app:layout_constraintBottom_toTopOf="@id/txtPagesLabel"
-        tools:text="$ 5,99"/>
+        app:layout_constraintStart_toEndOf="@id/txtPriceLabel"
+        tools:text="$ 5,99" />
 
 
     <TextView
@@ -111,24 +110,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dim_16_dp"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:text="@string/pages"
         android:textColor="@color/white"
         android:textSize="@dimen/dim_16_sp"
-        android:fontFamily="@font/roboto_condensed_bold"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:text="@string/pages"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtPages"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dim_16_dp"
         android:layout_marginStart="@dimen/dim_8_dp"
+        android:layout_marginBottom="@dimen/dim_16_dp"
         android:textColor="@color/white"
         android:textSize="@dimen/dim_16_sp"
-        app:layout_constraintStart_toEndOf="@id/txtPagesLabel"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:text="38"/>
+        app:layout_constraintStart_toEndOf="@id/txtPagesLabel"
+        tools:text="38" />
 
 
     <ImageView
@@ -146,3 +145,4 @@
         tools:srcCompat="@drawable/cover" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

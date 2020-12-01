@@ -41,9 +41,10 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comicRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarHome"
-        tools:listitem="@layout/list_item" />
+        tools:listitem="@layout/item_card_home" />
 
 </LinearLayout>

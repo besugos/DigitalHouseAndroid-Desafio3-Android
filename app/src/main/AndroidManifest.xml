@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.besugos.desafio3dha">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,13 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Login">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".BigCoverActivity" />
-        <activity android:name=".DetailActivity" />
-        <activity
-            android:name=".login.view.RegisterActivity"
-            android:parentActivityName=".login.view.LoginActivity" />
-        <activity android:name=".login.view.LoginActivity" />
+        <activity android:name=".home.view.DetailActivity"></activity>
+        <activity android:name=".home.view.HomeActivity" />
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".splash.view.SplashActivity"
             android:theme="@style/Splash">
@@ -25,7 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home.view.HomeActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

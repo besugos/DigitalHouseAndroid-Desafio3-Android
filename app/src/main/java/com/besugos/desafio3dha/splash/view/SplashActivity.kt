@@ -7,8 +7,8 @@ import android.os.Looper
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.besugos.desafio3dha.MainActivity
+import com.besugos.desafio3dha.home.view.HomeActivity
 import com.besugos.desafio3dha.R
-import com.besugos.desafio3dha.login.view.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

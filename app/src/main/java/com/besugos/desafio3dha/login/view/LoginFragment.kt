@@ -2,6 +2,7 @@ package com.besugos.desafio3dha.login.view
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -13,6 +14,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.Navigation
+import com.besugos.desafio3dha.home.view.HomeActivity
 import com.besugos.desafio3dha.R
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -70,7 +72,9 @@ class LoginFragment : Fragment() {
 
             if (validaCampos(view)) {
                 hideKeyboard()
-                navController.navigate(R.id.homeFragment)
+                //navController.navigate(R.id.homeFragment)
+                val intent = Intent(context, HomeActivity::class.java)
+                startActivity(intent)
             }
         }
     }
