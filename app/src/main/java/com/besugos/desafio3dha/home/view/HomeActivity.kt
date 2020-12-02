@@ -103,9 +103,7 @@ class HomeActivity : AppCompatActivity() {
                     val lastItem = lastVisible + 6 >= totalItemCount
 
                     if (totalItemCount > 0 && lastItem) {
-//                        showLoading(true)
                         _viewModel.nextPage().observe({ lifecycle }, {
-//                            showResults(_comics)
                             _comics.addAll(it)
                             _listAdapter.notifyDataSetChanged()
 
